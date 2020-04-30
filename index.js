@@ -1,6 +1,8 @@
 'use strict';
 
+// Значения: 0 = off, 1 = warn, 2 = error
 module.exports = {
+    parser: "babel-eslint",
     rules: {
         // The rules below are listed in the order they appear on the eslint rules page.
         // All rules are listed to make it easier to keep in sync as new ESLint rules are added.
@@ -9,37 +11,45 @@ module.exports = {
         // Possible Errors
         // http://eslint.org/docs/rules/#possible-errors
         // ---------------------------------------------
-        // 'for-direction': 0,
-        // 'no-await-in-loop': 0,
-        // 'no-compare-neg-zero': 2,
-        // 'no-cond-assign': 0,
-        // 'no-console': 2,
-        // 'no-constant-condition': 2,
-        // 'no-control-regex': 2,
-        // 'no-debugger': 2,
-        // 'no-dupe-args': 2,
-        // 'no-dupe-keys': 2,
-        // 'no-duplicate-case': 2,
-        // 'no-empty': 2,
-        // 'no-empty-character-class': 2,
-        // 'no-ex-assign': 2,
-        // 'no-extra-boolean-cast': 2,
-        // 'no-extra-parens': 0,
-        // 'no-extra-semi': 2,
-        // 'no-func-assign': 2,
-        // 'no-inner-declarations': 2,
-        // 'no-invalid-regexp': 2,
+        'for-direction': 2, // Запрещает циклы, которые могут итерироваться до бесконечности
+        // 'getter-return': 9,
+        // 'no-await-in-loop': 9,
+        // 'no-await-in-loop': '11111',
+        'no-compare-neg-zero': 2, // Запрещает сравнение с -0
+        'no-cond-assign': 2, // Запрещает оператор присваивания в условных выражениях
+        'no-console': [1, { allow: ["warn", "error"] }], // Рекомендация убрать все console.*, кроме console.warn и console.error
+        // 'no-constant-condition': [2, { "checkLoops": false }], // Запрещает постоянные выражения в условиях и циклах, кроме рекурсивных выражений с базовым случаем
+        // 'no-control-regex': 9,
+        'no-debugger': 2, // Запрещает дебаггеры
+        'no-dupe-args': 2, // Запрещает дублирование дублирующихся параметров в функции с одинакомы именем
+        // 'no-dupe-else-if': 2, // Запрещает дублирование тестовых конструкций в условиях
+        'no-dupe-keys': 2, // Запрещает дублирование именей ключей в одном объекте
+        'no-duplicate-case': 2, // Запрещает дублирование тестовый конструкций в switch case
+        'no-empty': 1, // Рекомендация убрать все пустые конструкции условий и циклов
+        // 'no-empty-character-class': 9,
+        // 'no-ex-assign': 9,
+        'no-extra-boolean-cast': 2, // Запрещает бессмысленные логические превращения
+        'no-extra-parens': 1, // Рекомендует убрать скобки там, где их использование бессмысленно
+        'no-extra-semi': 2, // Запрещает лишние точки с запятой: после условий, циклов и тд
+        'no-func-assign': 1, // Не рекомендует перезаписывать функции, объявленные через declaration
+        'no-import-assign': 2, // Запрещает присваивать новые значения переменным, в которые было что-то импортировано
+        'no-inner-declarations': [2, 'both'], // Запрещает объявлять переменные через var и функции внутри условий, циктов и тд
+        // 'no-invalid-regexp': 9,
         // 'no-irregular-whitespace': 2,
+        // 'no-misleading-character-class': 2,
         // 'no-obj-calls': 2,
         // 'no-prototype-builtins': 0,
         // 'no-regex-spaces': 2,
-        // 'no-sparse-arrays': 2,
-        // 'no-template-curly-in-string': 0,
-        // 'no-unexpected-multiline': 2,
-        // 'no-unreachable': 2,
+        // 'no-setter-return': 9,
+        'no-sparse-arrays': 2, // Запрещает оставлять пустые слоты в массиве (пустота между запятыми)
+        'no-template-curly-in-string': 1, // Рекомендация не использовать синтаксис литерала шаблона в обычных кавычках
+        'no-unexpected-multiline': 2, // Запрещает запутанные многострочные выражения без разделение точкой с запятой, например объявление переменной за которой на следующий строке без разделение сразу идет применение какой-либой функции
+        'no-unreachable': 2, // Запрещает код, который никогда не будет выполнен, после выражений с return, break и тд
         // 'no-unsafe-finally': 2,
-        // 'no-unsafe-negation': 0,
-        // 'use-isnan': 2
+        // 'no-unsafe-negation': 0, //
+        // 'no-useless-backreference': 9,
+        // 'require-atomic-updates': 9,
+        'use-isnan': 2, // Запрещает сравнение с NaN, рекомендует использование метода isNaN()
         // 'valid-jsdoc': [2, {
         //     requireParamDescription: false,
         //     requireReturnDescription: false,
@@ -54,7 +64,7 @@ module.exports = {
         // --------------------------------------------
 
         // 'accessor-pairs': 0,
-        // 'array-callback-return': 0,
+        'array-callback-return': 0,
         // 'block-scoped-var': 0,
         // 'class-methods-use-this': 0,
         // 'complexity': 0,
