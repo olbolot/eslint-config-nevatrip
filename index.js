@@ -146,7 +146,7 @@ module.exports = {
         // Strict Mode
         // http://eslint.org/docs/rules/#strict-mode
         // -----------------------------------------
-        // 'strict': 0,
+        'strict': 0, // Можно и не объявлять "use strict" режим.
 
         // Variables
         // http://eslint.org/docs/rules/#variables
