@@ -163,21 +163,6 @@ module.exports = {
         'no-unused-vars': [2, {args: 'none'}], // Запрещены переменные, которые нигде не используются, кроме параметров функции.
         'no-use-before-define': 2, // Запрещено использование переменных до их объявления.
 
-        // Node.js and CommonJS
-        // http://eslint.org/docs/rules/#nodejs-and-commonjs
-        // -------------------------------------------------
-        // 'callback-return': 0,
-        // 'global-require': 0,
-        // 'handle-callback-err': 0,
-        // 'no-buffer-constructor': 0,
-        // 'no-mixed-requires': 0,
-        // 'no-new-require': 0,
-        // 'no-path-concat': 0,
-        // 'no-process-env': 0,
-        // 'no-process-exit': 0,
-        // 'no-restricted-modules': 0,
-        // 'no-sync': 0,
-
         // Stylistic Issues
         // http://eslint.org/docs/rules/#stylistic-issues
         // ----------------------------------------------
