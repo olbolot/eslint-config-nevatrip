@@ -64,75 +64,84 @@ module.exports = {
         // --------------------------------------------
 
         // 'accessor-pairs': 0,
-        'array-callback-return': 0,
-        // 'block-scoped-var': 0,
+        'array-callback-return': 2, // Делает обязательным опретор return в методах массива, которые требуют того
+        'block-scoped-var': 2, // Запрещает вызов переменных, объявленных через оператор var, вне контекста, в котором они были объявлены.
         // 'class-methods-use-this': 0,
         // 'complexity': 0,
-        // 'consistent-return': 0
-        // TODO(philipwalton): add an option to enforce braces with the
-        // exception of simple, single-line if statements.
-        // 'curly': [2, 'multi-line'],
-        // 'default-case': 0,
-        // 'dot-location': 0,
-        // 'dot-notation': 0,
-        // 'eqeqeq': 0,
-        // 'guard-for-in': 2,
-        // 'no-alert': 0,
+        // 'consistent-return': 0,
+        'curly': [2, 'multi-line'], // Разрешено опускать фигурные скобки в усовиях, в блоке которых содержится только одна инструкция. Многострочные блочные инструкции должны быть заключены в фигурные скобки.
+        'default-case': 0, // Разрешено не использовать default в инструкции switch.
+        // 'default-case-last': 9,
+        'default-param-last': 0, // Разрешено не использовать для последних параметров значения по умолчанию в функциях.
+        'dot-location': [2, 'property'], // Запрещено использовать точку до перевода строки в выражениях. Разрешено ипользовать точку после перевода строки.
+        'dot-notation': 1, // Рекомендуется точечная нотация при обращении к свойствам объектов вместо обращения через строку в квадратных скобках.
+        'eqeqeq': 1, // Рекомендуется использование строгих равенстр и неравенств без приведения типов.
+        // 'grouped-accessor-pairs': 0,
+        'guard-for-in': 0, // Не обязательна проверка с помощью метода hasOwnProperty() в циклах for in, что свойсва объекта не являются отнаследованными через цепочку прототипов. Правило no-extend-native обезопасит нас от подобных проблем.
+        // 'max-classes-per-file': 9,
+        'no-alert': 1, // Не рекомендуется использование методов alert, prompt и confirm.
         // 'no-caller': 2,
-        // 'no-case-declarations': 2,
+        'no-case-declarations': 2, // Запрещено объявление переменных, функций, классов в switch-конструкциях case и default.
+        // 'no-constructor-return': 9,
         // 'no-div-regex': 0,
-        // 'no-else-return': 0,
-        // 'no-empty-function': 0,
-        // 'no-empty-pattern': 2,
-        // 'no-eq-null': 0,
+        'no-else-return': 2, // Если все if-блоки содержат return, то запрещено использование return в else. Его нужно вынесли за переделы блока с уловиями.
+        'no-empty-function': 1, // Не рекомендуется использовать функции с пустыми телами. (Однако в пустое тело функции можно написать комменатрий.)
+        'no-empty-pattern': 2, // Запрещено использовать пустые шаблоны деструктуризации.
+        'no-eq-null': 2, // Запрешено сравнение с null с приведением типов.
         // 'no-eval': 0,
-        // 'no-extend-native': 2,
+        'no-extend-native': 2, // Запрещено через Object.prototype изменение прототипа встроенных объектов.
         // 'no-extra-bind': 2,
         // 'no-extra-label': 0,
-        // 'no-fallthrough': 2,
-        // 'no-floating-decimal': 0,
-        // 'no-global-assign': 0,
-        // 'no-implicit-coercion': 0,
-        // 'no-implicit-globals': 0,
+        // 'no-fallthrough': 2, //
+        'no-floating-decimal': 2, // Запрещена запись float-чисел без нуля перед или после точки.
+        'no-global-assign': 2, // Заперещно присваивание новых значений встроенным глобальным переменных, которые предназнчаены только для чтения.
+        'no-implicit-coercion': 0, // Разрешено преобразование типов с помощью коротких конструкций такиех как !!, + и т.д.
+        // 'no-implicit-globals': 0, // Разрешены объявления переменных в глобальной области видимости, так как var заперещен правилом ?.
         // 'no-implied-eval': 0,
         // 'no-invalid-this': 2,
-        // 'no-iterator': 0,
+        'no-iterator': 2, // Запрещено переопределять .prototype.__iterator__, к тому же это свойство устарело.
         // 'no-labels': 0,
-        // 'no-lone-blocks': 0,
-        // 'no-loop-func': 0,
-        // 'no-magic-numbers': 0,
-        // 'no-multi-spaces': 2,
-        // 'no-multi-str': 2,
+        'no-lone-blocks': 2, // Запрещено создавать избыточные ненужные блочные обертки.
+        'no-loop-func': 0, // Запрещено объявление функций внутри циклов.
+        'no-magic-numbers': 0, // Разрешено использование «магических чисел», то есть чискл без присвоения их константам.
+        'no-multi-spaces': [2, { exceptions: { "Property": true } }], // Запрещены несколько пробелов подряд за исключением объявления свойств объекта.
+        'no-multi-str': 2, // Заперщены многострочные строки. Но многосточные строк можно использовать с оператором + .
         // 'no-new': 0,
         // 'no-new-func': 0,
         // 'no-new-wrappers': 2,
-        // 'no-octal': 2,
-        // 'no-octal-escape': 0,
-        // 'no-param-reassign': 0,
-        // 'no-proto': 0,
-        // 'no-redeclare': 2,
+        'no-octal': 2, // Запрещены восмеричные литералы.
+        'no-octal-escape': 2, // Запрещены восмеричные строковые литералы (они устарели). Соедует использовать Unicode-символы.
+        'no-param-reassign': 2, // Запрещено переназначение параметров функции. но разрешено переопределять их свойства.
+        'no-proto': 0, // Запретить использование __proto__ (оно устарело). Следует использовать getPrototypeOf/setPrototypeOf
+        'no-redeclare': 2, // Запрещено переообъявление переменной через var, если она уже была объявлена ранее.
         // 'no-restricted-properties': 0,
-        // 'no-return-assign': 0,
+        'no-return-assign': 2, // Запрещено присваивание значения в выражении с return.
+        // 'no-return-await': 0,
         // 'no-script-url': 0,
-        // 'no-self-assign': 2,
-        // 'no-self-compare': 0,
+        'no-self-assign': 2, // Запрещено назначать переменной в качестве значения саму себя.
+        'no-self-compare': 2, // Запрещено сравнение переменной с самой собой.
         // 'no-sequences': 0,
         // 'no-throw-literal': 2,
         // 'no-unmodified-loop-condition': 0,
         // 'no-unused-expressions': 0,
         // 'no-unused-labels': 2,
         // 'no-useless-call': 0,
-        // 'no-useless-concat': 0,
-        // 'no-useless-escape': 0,
+        // 'no-useless-catch': 9,
+        'no-useless-concat': 0, // Строчные литералы можно конкатенировать между собой.
+        'no-useless-escape': 2, // Запрещено бесполезное экранирование символов.
+        'no-useless-return': 2, // Запрещает избыточные объявления return.
         // 'no-void': 0,
-        // 'no-warning-comments': 0,
+        'no-warning-comments': 1, // Рекомендуется удалить все TODO и FIXME.
         // 'no-with': 2,
+        // 'prefer-named-capture-group': 9,
         // 'prefer-promise-reject-errors': 2,
+        // 'prefer-regex-literals': 9,
         // 'radix': 0,
-        // 'require-await': 0,
-        // 'vars-on-top': 0,
-        // 'wrap-iife': 0,
-        // 'yoda': 0,
+        'require-await': 2, // Запрещены асинхронные функции без await внутри.
+        // 'require-unicode-regexp': 9,
+        'vars-on-top': 0, // Переменные можно объявлять в любом месте кода.
+        'wrap-iife': 0, // Можно не оборачивать функции как IIFE.
+        'yoda': 0, // Можно в любой последовательно сравнивать значения.
 
         // Strict Mode
         // http://eslint.org/docs/rules/#strict-mode
