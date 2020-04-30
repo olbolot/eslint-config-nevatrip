@@ -151,18 +151,17 @@ module.exports = {
         // Variables
         // http://eslint.org/docs/rules/#variables
         // ---------------------------------------
-        // 'init-declarations': 0,
-        // 'no-catch-shadow': 0,
-        // 'no-delete-var': 2,
+        'init-declarations': 0, // Переменные можно инициализировать как во время объявления, так и после.
+        'no-delete-var': 2, // Запрещено удалять переменные с помощью оператора delete.
         // 'no-label-var': 0,
-        // 'no-restricted-globals': 0,
-        // 'no-shadow': 0,
+        'no-restricted-globals': 0, // Нет специально назначенных запрещенных имен переменных. Здесь их можно назначить в случае необходимости.
+        'no-shadow': 0, // Разрешено объявлять переменные несколько раз, но в разных областях видимости.
         // 'no-shadow-restricted-names': 0,
-        // 'no-undef': 2,
-        // 'no-undef-init': 0,
-        // 'no-undefined': 0,
-        // 'no-unused-vars': [2, {args: 'none'}],
-        // 'no-use-before-define': 0,
+        'no-undef': 0, // Разрешено использование необъвленных переменных (например, таких как document).
+        'no-undef-init': 2, // Запрещено присваивать при объявлении переменным undefined, объявленныс через let и var.
+        'no-undefined': 2, // Запрещено переменной давать имя undefined.
+        'no-unused-vars': [2, {args: 'none'}], // Запрещены переменные, которые нигде не используются, кроме параметров функции.
+        'no-use-before-define': 2, // Запрещено использование переменных до их объявления.
 
         // Node.js and CommonJS
         // http://eslint.org/docs/rules/#nodejs-and-commonjs
