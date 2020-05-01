@@ -1,10 +1,10 @@
 {
   "name": "nevatrip-linter",
   "version": "1.0.0",
-  "description": "A config of checker for JavaScript.",
+  "description": "ESlint config for Nevatrip projects.",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "echo \"No test specified\""
   },
   "author": {
     "name": "Olga Bolotova",
