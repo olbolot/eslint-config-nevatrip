@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nevatrip",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ESlint config for Nevatrip projects.",
   "main": "index.js",
   "scripts": {
