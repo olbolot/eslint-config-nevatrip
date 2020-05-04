@@ -1,5 +1,5 @@
 {
-  "name": "nevatrip-linter",
+  "name": "eslint-config-nevatrip",
   "version": "1.0.3",
   "description": "ESlint config for Nevatrip projects.",
   "main": "index.js",
