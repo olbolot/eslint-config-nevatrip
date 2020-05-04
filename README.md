@@ -1,4 +1,4 @@
-# nevatrip-linter
+# eslint-config-nevatrip
 
 ## Installation
-`npm install nevatrip-linter --save-dev`
+`npm install eslint-config-nevatrip --save-dev`

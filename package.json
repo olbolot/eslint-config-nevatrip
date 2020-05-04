@@ -12,10 +12,11 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/olbol/nevatrip-linter/issues"
+    "url": "https://github.com/olbol/eslint-config-nevatrip/issues"
   },
-  "homepage": "https://github.com/olbol/nevatrip-linter#readme",
+  "homepage": "https://github.com/olbol/eslint-config-nevatrip#readme",
   "peerDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "babel-eslint": "^10.1.0"
   }
 }
