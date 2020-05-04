@@ -2,7 +2,7 @@
 
 // Значения: 0 = off, 1 = warn, 2 = error
 module.exports = {
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   rules: {
     // The rules below are listed in the order they appear on the eslint rules page.
     // All rules are listed to make it easier to keep in sync as new ESLint rules are added.
@@ -17,7 +17,7 @@ module.exports = {
     // 'no-await-in-loop': '11111',
     'no-compare-neg-zero': 2, // Запрещает сравнение с -0
     'no-cond-assign': 2, // Запрещает оператор присваивания в условных выражениях
-    'no-console': [1, {allow: ["warn", "error"]}], // Рекомендация убрать все console.*, кроме console.warn и console.error
+    'no-console': [ 1, { allow: [ 'warn', 'error' ] } ], // Рекомендация убрать все console.*, кроме console.warn и console.error
     // 'no-constant-condition': [2, { "checkLoops": false }], // Запрещает постоянные выражения в условиях и циклах, кроме рекурсивных выражений с базовым случаем
     // 'no-control-regex': 9,
     'no-debugger': 2, // Запрещает дебаггеры
@@ -33,7 +33,7 @@ module.exports = {
     'no-extra-semi': 2, // Запрещает лишние точки с запятой: после условий, циклов и тд
     'no-func-assign': 1, // Не рекомендует перезаписывать функции, объявленные через declaration
     'no-import-assign': 2, // Запрещает присваивать новые значения переменным, в которые было что-то импортировано
-    'no-inner-declarations': [2, 'both'], // Запрещает объявлять переменные через var и функции внутри условий, циктов и тд
+    'no-inner-declarations': [ 2, 'both' ], // Запрещает объявлять переменные через var и функции внутри условий, циктов и тд
     // 'no-invalid-regexp': 9,
     // 'no-irregular-whitespace': 2,
     // 'no-misleading-character-class': 2,
@@ -69,11 +69,11 @@ module.exports = {
     // 'class-methods-use-this': 0,
     // 'complexity': 0,
     // 'consistent-return': 0,
-    'curly': [2, 'multi-line'], // Разрешено опускать фигурные скобки в усовиях, в блоке которых содержится только одна инструкция. Многострочные блочные инструкции должны быть заключены в фигурные скобки.
+    'curly': [ 2, 'multi-line' ], // Разрешено опускать фигурные скобки в усовиях, в блоке которых содержится только одна инструкция. Многострочные блочные инструкции должны быть заключены в фигурные скобки.
     'default-case': 0, // Разрешено не использовать default в инструкции switch.
     // 'default-case-last': 9,
     'default-param-last': 0, // Разрешено не использовать для последних параметров значения по умолчанию в функциях.
-    'dot-location': [2, 'property'], // Запрещено использовать точку до перевода строки в выражениях. Разрешено ипользовать точку после перевода строки.
+    'dot-location': [ 2, 'property' ], // Запрещено использовать точку до перевода строки в выражениях. Разрешено ипользовать точку после перевода строки.
     'dot-notation': 1, // Рекомендуется точечная нотация при обращении к свойствам объектов вместо обращения через строку в квадратных скобках.
     'eqeqeq': 1, // Рекомендуется использование строгих равенстр и неравенств без приведения типов.
     // 'grouped-accessor-pairs': 0,
@@ -96,7 +96,7 @@ module.exports = {
     'no-floating-decimal': 2, // Запрещена запись float-чисел без нуля перед или после точки.
     'no-global-assign': 2, // Заперещно присваивание новых значений встроенным глобальным переменных, которые предназнчаены только для чтения.
     'no-implicit-coercion': 0, // Разрешено преобразование типов с помощью коротких конструкций такиех как !!, + и т.д.
-    // 'no-implicit-globals': 0, // Разрешены объявления переменных в глобальной области видимости, так как var заперещен правилом ?.
+    // 'no-implicit-globals': 0, // Разрешены объявления переменных в глобальной области видимости, так как var заперещен правилом no-var.
     // 'no-implied-eval': 0,
     // 'no-invalid-this': 2,
     'no-iterator': 2, // Запрещено переопределять .prototype.__iterator__, к тому же это свойство устарело.
@@ -104,7 +104,7 @@ module.exports = {
     'no-lone-blocks': 2, // Запрещено создавать избыточные ненужные блочные обертки.
     'no-loop-func': 0, // Запрещено объявление функций внутри циклов.
     'no-magic-numbers': 0, // Разрешено использование «магических чисел», то есть чискл без присвоения их константам.
-    'no-multi-spaces': [2, {exceptions: {"Property": true}}], // Запрещены несколько пробелов подряд за исключением объявления свойств объекта.
+    'no-multi-spaces': [ 2, { exceptions: { 'Property': true } } ], // Запрещены несколько пробелов подряд за исключением объявления свойств объекта.
     'no-multi-str': 2, // Заперщены многострочные строки. Но многосточные строк можно использовать с оператором + .
     // 'no-new': 0,
     // 'no-new-func': 0,
@@ -160,24 +160,24 @@ module.exports = {
     'no-undef': 0, // Разрешено использование необъвленных переменных (например, таких как document).
     'no-undef-init': 2, // Запрещено присваивать при объявлении переменным undefined, объявленныс через let и var.
     'no-undefined': 2, // Запрещено переменной давать имя undefined.
-    'no-unused-vars': [2, {args: 'none'}], // Запрещены переменные, которые нигде не используются, кроме параметров функции.
+    'no-unused-vars': [ 2, { args: 'none' } ], // Запрещены переменные, которые нигде не используются, кроме параметров функции.
     'no-use-before-define': 2, // Запрещено использование переменных до их объявления.
 
     // Stylistic Issues
     // http://eslint.org/docs/rules/#stylistic-issues
     // ----------------------------------------------
-    'array-bracket-newline': 0,
-    'array-bracket-spacing': [2, 'never'],
-    'array-element-newline': 0,
-    'block-spacing': [2, 'never'],
-    'brace-style': 2,
-    'camelcase': [2, {properties: 'never'}],
-    'capitalized-comments': 0,
-    'comma-dangle': [2, 'always-multiline'],
-    'comma-spacing': 2,
-    'comma-style': 2,
-    'computed-property-spacing': 2,
-    'consistent-this': 0,
+    'array-bracket-newline': [ 2, 'consistent' ], // Разрывы строк внутри скобок массива можно как использовать, так и не ипользовать, однако необходимо соблюдать консистентность – последовательность в переносах строк для каждой скобки.
+    'array-bracket-spacing': [ 2, 'always' ], // Внутри скобок в массиве обязательно требуются пробелы или переод строки.
+    'array-element-newline': [ 2, "consistent" ], // Разрыв строк между элементами массва не обяхзателен, однако разрывы или их отсутствие должны быть консистентными.
+    'block-spacing': [ 2, 'always' ], // Обязательны пробелы внутри блоков после и до закрытия скобок.
+    'brace-style': 2, // Открывающие скобки блоков должны находиться на одной строке с пердыдущей скобкой.
+    'camelcase': [ 2, { properties: 'never' } ], // Для всех переменных должен быть использован camelcase-стиль, кроме свойств.
+    'capitalized-comments': 0, // Комментарии могут быть в любом стиле.
+    'comma-dangle': [ 2, 'always-multiline', {"functions": "never"} ], // Необходимы запятые, когда последний элемент или свойство находится в строке, отличной от закрывающей ] или }, и запрещает запятые, когда последний элемент или свойство находится на той же строке, что и закрывающий ] или }. В функциях после последнего параметра запятой не должно быть.
+    'comma-spacing': 2, // Между литералами запрещает пробелы перед запятыми, требует один или несколько пробелов после запятых.
+    'comma-style': 2, // Расположение запятой должно быть после и в той же строке, что и элемент массива, свойство объекта или объявление переменной.
+    'computed-property-spacing': [2, "always", { "enforceForClassMembers": true }], // Пробелы между скобок внутри вычисляемых свойств обязательны (в том числе и в вычисляемых ключах методов класса).
+    // 'consistent-this': 0,
     'eol-last': 2,
     'func-call-spacing': 2,
     'func-name-matching': 0,
@@ -210,6 +210,7 @@ module.exports = {
         ],
       },
     ],
+
     'jsx-quotes': 0,
     'key-spacing': 2,
     'keyword-spacing': 2,
@@ -218,12 +219,12 @@ module.exports = {
     'lines-around-comment': 0,
     'lines-between-class-members': 0,
     'max-depth': 0,
-    'max-len': [2, {
-      code: 80,
+    'max-len': [ 2, {
+      code: 120,
       tabWidth: 2,
       ignoreUrls: true,
       ignorePattern: 'goog\.(module|require)',
-    }],
+    } ],
     'max-lines': 0,
     'max-lines-per-function': 0,
     'max-nested-callbacks': 0,
@@ -243,7 +244,7 @@ module.exports = {
     'no-mixed-operators': 0,
     'no-mixed-spaces-and-tabs': 2,
     'no-multi-assign': 0,
-    'no-multiple-empty-lines': [2, {max: 2}],
+    'no-multiple-empty-lines': [ 2, { max: 2 } ],
     'no-negated-condition': 0,
     'no-nested-ternary': 0,
     'no-new-object': 2,
@@ -257,37 +258,37 @@ module.exports = {
     'no-whitespace-before-property': 0,
     'nonblock-statement-body-position': 0,
     'object-curly-newline': 0,
-    'object-curly-spacing': [2, 'always'], // Обязательно должны быть интервалы внутри фигурных скобок объекта.
+    'object-curly-spacing': [ 2, 'always' ], // Обязательно должны быть интервалы внутри фигурных скобок объекта.
     'object-property-newline': 0,
-    'one-var': [2, {
+    'one-var': [ 2, {
       var: 'never',
       let: 'never',
       const: 'never',
-    }],
+    } ],
     'one-var-declaration-per-line': 0,
     'operator-assignment': 0,
-    'operator-linebreak': [2, 'after'],
-    'padded-blocks': [2, 'never'],
+    'operator-linebreak': [ 2, 'after' ],
+    'padded-blocks': [ 2, 'never' ],
     'padding-line-between-statements': 0,
     'prefer-exponentiation-operator': 0,
     'pprefer-object-spread': 0,
-    'quote-props': [2, 'consistent'],
-    'quotes': [2, 'single', {allowTemplateLiterals: true}],
+    'quote-props': [ 2, 'consistent' ],
+    'quotes': [ 2, 'single', { allowTemplateLiterals: true } ],
     'semi': 2,
     'semi-spacing': 2,
     'semi-style': 0,
     'sort-keys': 0,
     'sort-vars': 0,
     'space-before-blocks': 2,
-    'space-before-function-paren': [2, {
+    'space-before-function-paren': [ 2, {
       asyncArrow: 'always',
       anonymous: 'never',
       named: 'never',
-    }],
+    } ],
     'space-in-parens': 0,
     'space-infix-ops': 0,
     'space-unary-ops': 0,
-    'spaced-comment': [2, 'always'],
+    'spaced-comment': [ 2, 'always' ],
     'switch-colon-spacing': 2,
     'template-tag-spacing': 0,
     'unicode-bom': 0,
@@ -297,10 +298,10 @@ module.exports = {
     // http://eslint.org/docs/rules/#ecmascript-6
     // ------------------------------------------
     'arrow-body-style': 0,
-    'arrow-parens': [2, 'always'],
+    'arrow-parens': [ 2, 'always' ],
     'arrow-spacing': 0,
     'constructor-super': 2,
-    'generator-star-spacing': [2, 'after'],
+    'generator-star-spacing': [ 2, 'after' ],
     'no-class-assign': 0,
     'no-confusing-arrow': 0,
     'no-const-assign': 0,
@@ -316,7 +317,7 @@ module.exports = {
     'no-var': 2,
     'object-shorthand': 0,
     'prefer-arrow-callback': 0,
-    'prefer-const': [2, {destructuring: 'all'}],
+    'prefer-const': [ 2, { destructuring: 'all' } ],
     'prefer-destructuring': 0,
     'prefer-numeric-literals': 0,
     'prefer-rest-params': 2,
@@ -327,6 +328,6 @@ module.exports = {
     'sort-imports': 0,
     'symbol-description': 0,
     'template-curly-spacing': 0,
-    'yield-star-spacing': [2, 'after'],
+    'yield-star-spacing': [ 2, 'after' ],
   },
 };
