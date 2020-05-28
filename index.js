@@ -190,29 +190,30 @@ module.exports = {
     'id-match': 0,
     'implicit-arrow-linebreak': 0,
     'indent': [
-      2, 2, {
-        'CallExpression': {
-          'arguments': 2,
-        },
-        'FunctionDeclaration': {
-          'body': 1,
-          'parameters': 2,
-        },
-        'FunctionExpression': {
-          'body': 1,
-          'parameters': 2,
-        },
-        'MemberExpression': 2,
-        'ObjectExpression': 1,
-        'SwitchCase': 1,
-        'ignoredNodes': [
-          'ConditionalExpression',
-        ],
-      },
+      2, 2,
+      // {
+      //   'CallExpression': {
+      //     'arguments': 2,
+      //   },
+      //   'FunctionDeclaration': {
+      //     'body': 1,
+      //     'parameters': 2,
+      //   },
+      //   'FunctionExpression': {
+      //     'body': 1,
+      //     'parameters': 2,
+      //   },
+      //   'MemberExpression': 2,
+      //   'ObjectExpression': 1,
+      //   'SwitchCase': 1,
+      //   'ignoredNodes': [
+      //     'ConditionalExpression',
+      //   ],
+      // },
     ],
 
     'jsx-quotes': 0,
-    'key-spacing': 2,
+    'key-spacing': [2, {'beforeColon': true}],
     'keyword-spacing': 2,
     'line-comment-position': 0,
     'linebreak-style': 2,
